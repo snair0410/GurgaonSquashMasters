@@ -62,14 +62,14 @@ const Pin = ({ pins }) => {
         </div>
         </div>
         { filteredData.length === 0 && (
-            <div className="container mx-auto sm:centre space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
+            <div className="container mx-auto sm:centre space-y-6 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
                 {pins.rankingData.map((item) => (
                     <Card imgUrl={item.memberimageurl} title={item.playername} body={item.rank} points={item.totalweightedpoints} pid={item._id} />
                 ))}
             </div>
         )}
         {filteredData.length !== 0 && (
-         <div className="container mx-auto sm:centre space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
+         <div className="container mx-auto sm:centre space-y-6 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3">
             {filteredData.map((item) => (
                 <Card imgUrl={item.memberimageurl} title={item.playername} body={item.rank} points={item.totalweightedpoints} pid={item._id} />
             ))}
