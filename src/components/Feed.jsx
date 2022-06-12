@@ -15,7 +15,7 @@ const Feed = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'https://gsmbackend.herokuapp.com/getRanks', 
+          'https://gsmbackend.herokuapp.com/admin/getRanks', 
           'GET',
         );
         setPins(responseData)
