@@ -4,6 +4,7 @@ import { RiHomeFill } from 'react-icons/ri'
 import logo from '../assets/gsmlogo.jpeg'
 import { categories } from '../utils/data'
 import { useStateContext } from "../context/authContext";
+import { MdFacebook } from "react-icons/md";
 
 const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize'
 const isActiveStyle = 'flex items-center px-5 gap-3 font-extrabold border-r-2 border-black transition-all duration-200 ease-in-out capitalize'
@@ -124,6 +125,14 @@ const handleCloseSideBar = () => {
             </div>
         </div>
         <div className="flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3" onClick={handleCloseSideBar}>
+        <a
+                type="button"
+                className=" bg-white p-2 rounded-full cursor-pointer outline-none shadow-md"
+                href='https://www.facebook.com/gurgaonsquashmasters'
+                target='_blank'
+          >
+            <MdFacebook  fontSize={21} />
+        </a>
           <img src={imgUrl} referrerpolicy="no-referrer" className='w-10 h-10 rounded-full' alt='user-profile' />
           <p>{name}</p>
         </div>      
