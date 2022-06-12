@@ -17,7 +17,7 @@ const CreatePlayer = () => {
     if(pname){
         try {
             const responseData = await sendRequest(
-              'http://localhost:5000/admin/addPlayer', 
+              'https://gsmbackend.herokuapp.com/addPlayer', 
               'POST',
               JSON.stringify({
                   urlPath,
@@ -29,7 +29,6 @@ const CreatePlayer = () => {
                   'Content-Type': 'application/json'
               }
             );
-            console.log(responseData)
           } catch (err) {
             console.log(err)
           }   

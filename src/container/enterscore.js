@@ -6,7 +6,6 @@ import { Link, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import logo from '../assets/gsmlogo.jpeg'
 import { useStateContext } from "../context/authContext";
-import Pins from './Pins';
 import EnterMatch from '../components/EnterMatch';
 
 const EnterScore = () => {

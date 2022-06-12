@@ -1,8 +1,7 @@
-import React, { useState, useEffect} from 'react'
-import { NavLink, Link, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Card.css'
 import  logo  from '../assets/gsmlogo.jpeg'
-import PlayerDetail from './PlayerDetail'
 
 const Card = ({ imgUrl, title, body, points, pid}) => {
 

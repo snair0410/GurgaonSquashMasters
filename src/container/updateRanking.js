@@ -4,7 +4,6 @@ import { Link, Route, Routes } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import logo from '../assets/gsmlogo.jpeg'
 import { useStateContext } from "../context/authContext";
-import Pins from './Pins';
 import UpdatePlayerRanking from '../components/UpdatePlayerRanking';
 import { HiMenu } from 'react-icons/hi';
 import { AiFillCloseCircle } from 'react-icons/ai';

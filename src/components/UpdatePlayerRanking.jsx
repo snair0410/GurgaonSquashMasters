@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useHttpClient } from '../hooks/http-hook'
 
 
@@ -11,13 +11,12 @@ const UpdatePlayerRanking = () => {
     e.preventDefault()
         try {
             const responseData = await sendRequest(
-              'http://localhost:5000/admin/updateRanking', 
+              'https://gsmbackend.herokuapp.com/updateRanking', 
               'POST',
               {
                   'Content-Type': 'application/json'
               }
             );
-            console.log(responseData)
           } catch (err) {
             console.log(err)
           }   

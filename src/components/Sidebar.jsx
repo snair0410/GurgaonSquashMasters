@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { RiHomeFill } from 'react-icons/ri'
 import logo from '../assets/gsmlogo.jpeg'
-import { categories } from '../utils/data'
 import { useStateContext } from "../context/authContext";
 import { MdFacebook } from "react-icons/md";
 
@@ -84,9 +83,7 @@ const handleCloseSideBar = () => {
                  to={`/unrankedPlayers`}
                  className={({isActive}) => isActive ? isActiveStyle : isNotActiveStyle}
                  onClick={handleCloseSideBar}
-               //   key={category.name}
                  >
-                   {/* <img src={category.image} className="w-8 h-8 rounded-full shadow-sm" /> */}
                    Unranked Players
                </NavLink>
             {name === 'Sandeep Nair' && (
@@ -94,9 +91,7 @@ const handleCloseSideBar = () => {
                  to={`/entermatch`}
                  className={({isActive}) => isActive ? isActiveStyle : isNotActiveStyle}
                  onClick={handleCloseSideBar}
-               //   key={category.name}
                  >
-                   {/* <img src={category.image} className="w-8 h-8 rounded-full shadow-sm" /> */}
                    Enter Match Score
                </NavLink>
             )}
@@ -105,9 +100,7 @@ const handleCloseSideBar = () => {
                  to={`/addPlayer`}  
                  className={({isActive}) => isActive ? isActiveStyle : isNotActiveStyle}
                  onClick={handleCloseSideBar}
-               //   key={category.name}
                  >
-                   {/* <img src={category.image} className="w-8 h-8 rounded-full shadow-sm" /> */}
                    Add Player
                </NavLink>
             )} 
@@ -116,9 +109,7 @@ const handleCloseSideBar = () => {
                  to={`/updateRanking`}  
                  className={({isActive}) => isActive ? isActiveStyle : isNotActiveStyle}
                  onClick={handleCloseSideBar}
-               //   key={category.name}
                  >
-                   {/* <img src={category.image} className="w-8 h-8 rounded-full shadow-sm" /> */}
                    Update Ranking
                </NavLink>
             )}                

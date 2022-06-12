@@ -1,7 +1,6 @@
 import React, {useEffect, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import jwt_decode from 'jwt-decode'
-import logo from '../assets/gsmlogo.jpeg'
 import { useStateContext } from "../context/authContext";
 
 const Login = () => {
@@ -10,9 +9,7 @@ const { login } = useStateContext()
 const navigate = useNavigate()
 
 const handleCallbackResponse = (response) => {
-    console.log(response.credential)
     var userObject = jwt_decode(response.credential)
-    console.log(userObject)
     login(userObject.name, userObject.picture)
     navigate('/')
 }
@@ -42,9 +39,6 @@ useEffect(() => {
               alt="user-pic"
             />
         <div className='absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 bg-blackOverlay'>
-          {/* <div className='p-5'>
-            <img src={logo} width='130px' alt='logo' />
-          </div> */}
           <div className='shadow-2xl left-10'>
             <div id='signInDiv'></div>
           </div>

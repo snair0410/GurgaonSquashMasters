@@ -49,7 +49,6 @@ const Pin = ({ pins }) => {
                             onChange={handleFilter}
                             placeholder="Search for full Player Name eg) Sandeep Nair"
                             value={searchValue}
-                                // onFocus={() => navigate('/search')}
                             className="p-2 w-full bg-white outline-none" />
             </div>
             <div className="relative top-0 z-1 right-0 p-2">

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Spinner from './Spinner'
 import { useHttpClient } from '../hooks/http-hook'
 import {  useNavigate } from 'react-router-dom'
 import { AiOutlineLogout } from 'react-icons/ai';
@@ -24,10 +23,9 @@ const GSMEdition3 = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'http://localhost:5000/admin/getEdition3', 
+          'https://gsmbackend.herokuapp.com/getEdition3', 
           'GET',
         );
-        console.log(responseData)
         setEdition3Data(responseData)
         setLoading(false)
       } catch (err) {

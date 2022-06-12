@@ -16,7 +16,7 @@ const EnterMatch = () => {
     e.preventDefault()
         try {
             const responseData = await sendRequest(
-              'http://localhost:5000/admin/addMatch', 
+              'https://gsmbackend.herokuapp.com/addMatch', 
               'POST',
               JSON.stringify({
                   playerOneName,
@@ -30,7 +30,6 @@ const EnterMatch = () => {
                   'Content-Type': 'application/json'
               }
             );
-            console.log(responseData)
           } catch (err) {
             console.log(err)
           }   

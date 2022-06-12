@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useCallback} from 'react'
+import React, { createContext, useState, useContext} from 'react'
 
 const StateContext = createContext()
 
@@ -13,11 +13,8 @@ export const ContextProvider  = ({ children }) => {
     const [imgUrl, setImgUrl] = useState(null)
 
     const login = (uName, imageUrl) => {
-        console.log("hi i am here")
         setName(uName)
-        console.log(uName)
         setImgUrl(imageUrl)
-        console.log(imageUrl)
         localStorage.setItem('userData', JSON.stringify({name: uName, uImage: imageUrl}))
       }
 

@@ -1,5 +1,5 @@
 import React,{ useState, useEffect} from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Spinner from './Spinner'
 import { useHttpClient } from '../hooks/http-hook'
 
@@ -17,7 +17,7 @@ const PlayerDetail = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'http://localhost:5000/admin/getPlayer', 
+          'https://gsmbackend.herokuapp.com/getPlayer', 
           'POST',
           JSON.stringify({
               pid,
@@ -26,7 +26,6 @@ const PlayerDetail = () => {
               'Content-Type': 'application/json'
           }
         );
-        console.log(responseData)
         setPins(responseData)
         setLoading(false)
       } catch (err) {
