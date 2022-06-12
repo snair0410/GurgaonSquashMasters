@@ -23,7 +23,7 @@ const GSMEdition3 = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'https://gsmbackend.herokuapp.com/getEdition3', 
+          'https://gsmbackend.herokuapp.com/admin/getEdition3', 
           'GET',
         );
         setEdition3Data(responseData)

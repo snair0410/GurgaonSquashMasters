@@ -17,7 +17,7 @@ const PlayerDetail = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'https://gsmbackend.herokuapp.com/getPlayer', 
+          'https://gsmbackend.herokuapp.com/admin/getPlayer', 
           'POST',
           JSON.stringify({
               pid,

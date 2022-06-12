@@ -11,7 +11,7 @@ const UpdatePlayerRanking = () => {
     e.preventDefault()
         try {
             const responseData = await sendRequest(
-              'https://gsmbackend.herokuapp.com/updateRanking', 
+              'https://gsmbackend.herokuapp.com/admin/updateRanking', 
               'POST',
               {
                   'Content-Type': 'application/json'

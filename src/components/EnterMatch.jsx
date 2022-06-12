@@ -16,7 +16,7 @@ const EnterMatch = () => {
     e.preventDefault()
         try {
             const responseData = await sendRequest(
-              'https://gsmbackend.herokuapp.com/addMatch', 
+              'https://gsmbackend.herokuapp.com/admin/addMatch', 
               'POST',
               JSON.stringify({
                   playerOneName,

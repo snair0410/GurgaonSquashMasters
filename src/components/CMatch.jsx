@@ -20,7 +20,7 @@ const CMatch = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'https://gsmbackend.herokuapp.com/challengeMatch', 
+          'https://gsmbackend.herokuapp.com/admin/challengeMatch', 
           'GET',
         );
         setCMatch(responseData)

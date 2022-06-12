@@ -24,7 +24,7 @@ const GSMEdition1 = () => {
     const fetchData = async () => {
       try {
         const responseData = await sendRequest(
-          'https://gsmbackend.herokuapp.com/getEdition1', 
+          'https://gsmbackend.herokuapp.com/admin/getEdition1', 
           'GET',
         );
         setEdition1Data(responseData)
